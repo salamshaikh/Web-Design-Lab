@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Smart Grading System - Student Registration</title>
+	<link rel="stylesheet" type="text/css" href="css/mystyle.css" />
+	<meta charset="utf-8">
+</head>
+<body>
+
+	<header>
+        <h1> SMART GRADING SYSTEM</h1>
+        <nav>
+            <ul class="nav">
+				<li><a href="index.html">Home</a> </li>
+				<li><a href="about.html">About Us</a> </li>
+				<li><a href="registration.html">Register</a> </li>
+				<li><a href="login.php">Login</a> </li>
+				<li><a href="contact.php">Contact Us</a> </li>
+            </ul>
+        </nav>
+	</header>
+	<section>
+	<h2>Student Registration Form</h2>
+	<article class="card col-2">
+	<form method="post" action="submitreg.php">
+	  <fieldset>
+	  	<legend>Personal Information</legend>
+		
+		<p>Roll No <br><input  type="text" name="rollno" id="rollno" value=""/>
+		<br>
+		Name <br> <input type="text" name="sname" id="sname" required="required"/>
+		<br>
+		Gender: <br> 
+		<input type="radio" name="gender" id="male" value="Male"    required="required"/>
+		Male
+		<input type="radio" name="gender" id="female" value="Female"    required="required"/>
+		Female</p>
+		
+		<p>		Address:  <br>
+		<textarea cols="15" rows="4" name="address" id="address" required="required"></textarea><br>
+		<br>Password<br><input type="password" name="pwd"></p>
+
+		<p> Date of Birth<br>
+		<input type="date" name="dob" id="dob" required="required"/>
+		</p>
+	 </fieldset>
+	
+	</article>
+	<article class="card col-2">
+		<fieldset>
+	  	<legend>Academic Information</legend>
+		<p> Semester<br>
+		<select name="sem" id="sem" size="1"    required="required">
+			<option value="">--------</option>
+			<option value="1">I</option>
+			<option value="2">II</option>
+			<option value="3">III</option>
+			<option value="4">IV</option>
+			<option value="5">V</option>
+			<option value="6">VI</option>
+			<option value="7">VII</option>
+			<option value="8">VIII</option>
+		</select>
+		</p>
+
+
+		<p> Email Address<br> 
+		<input type="email" name="semail" id="semail"    required="required"/>
+		</p>
+
+		<p> Department <br>
+			<select name="dept" id="dept"    required="required">
+			<option value="">--------</option>
+			<option value="CO">Computer</option>
+			<option value="CE">Civil</option>
+			<option value="ME">Mechanical</option>
+			<option value="EE">Electrical</option>
+			<option value="EXTC">Electronics & Telecommunications</option>
+		</select>
+		</p>
+
+		<p> Batch<br>
+		<select name="batch" id="batch"    required="required">
+			<option value="">--------</option>
+			<option value="B1">Batch 1</option>
+			<option value="B2">Batch 2</option>
+			<option value="B3">Batch 3</option>
+			<option value="B4">Batch 4</option>
+		</select>
+		</p>
+		<input type="submit" id="ssubmit" name = "btn_register" 
+		value="Submit Form">
+		<p> Already have an account, <a href="login.php">login</a> here</p>
+	</fieldset>
+	</form>	
+	</article>
+	</section>
+	
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>
