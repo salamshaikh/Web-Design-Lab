@@ -10,7 +10,8 @@
 		}
 	</style>
     <link href="css/mystyle.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" 
+	src="js/jquery-3.4.1.min.js"></script>
 </head>
 
 <body>
@@ -39,23 +40,22 @@
 		    ?>
 			<script>
 			$(function () {
-			$('#status').css('background-color','lightgreen');	
-			$('#status').html('<center>Login Successful ! <br/> Redirecting to home page</center>').fadeIn().delay(2000).fadeOut();
+			$('#status').css('background-color','blue');	
+			$('#status').css('color','yellow');
+			$('#status').html('<center>Login Successful !			 <br/> Redirecting to home page</center>').fadeIn().delay(2000).fadeOut();
 			});
-				</script>
+			</script>
 			<?php
 				$_SESSION['user']=$username;
 				header("Refresh:1,url=home.php");
 			}
-			else
-			{
-				?>
+			else {
+			?>
 				<script>
 				$(function () {
-					$('#status').css('background-color','red');
-                    $('#status').css('color','white');
-                    $('#status').html('<center>Incorrect username or password!<br> Please try again.</center>').fadeIn().delay(2000).
-                     fadeOut();
+					$('#status').css('background-color','yellow');
+                    $('#status').css('color','blue');
+                    $('#status').html('<center>Incorrect username or password!<br> Please try again.</center>').fadeIn().delay(2000).fadeOut();
 				});
 				</script>
 			<?php

@@ -14,9 +14,11 @@
         $dept = $_POST['dept'];
         $batch = $_POST['batch'];
 
-        $sql = "INSERT INTO users (rollno, name, gender, address, password,
-        dob, sem, email, dept, batch) values ('$rollno','$name','$gender',
-        '$address', '$pwd', '$dob', '$sem', '$email', '$dept', '$batch')";
+        $sql = "INSERT INTO users (rollno, name, gender, 
+        address, password, dob, sem, email, dept, batch)
+         values ('$rollno','$name','$gender', '$address',
+          '$pwd', '$dob', '$sem', '$email', '$dept',
+           '$batch')";
         
         // echo $sql; // for testing purpose
 
@@ -27,8 +29,5 @@
         else{
             echo $conn->error;
         }
-        
-    }
-     
-
+    }     
 ?>

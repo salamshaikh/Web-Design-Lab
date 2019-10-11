@@ -25,8 +25,3 @@
             header("Refresh:0,url=login.php");
         }
      ?>
-            
-        </article>
-      </section>
-</body>
-
